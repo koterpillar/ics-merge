@@ -1,0 +1,34 @@
+name:                ics-merge
+version:             0.1.0.0
+github:              "koterpillar/ics-merge"
+license:             BSD3
+author:              "Alexey Kotlyarov"
+maintainer:          "a@koterpillar.com"
+copyright:           "2019 Alexey Kotlyarov"
+
+extra-source-files:
+- README.md
+
+description:         Please see the README on GitHub at <https://github.com/koterpillar/ics-merge#readme>
+
+dependencies:
+- base >= 4.7 && < 5
+- bytestring
+- directory
+- extra
+- text
+- scotty
+
+library:
+  source-dirs: src
+
+executables:
+  ics-merge-exe:
+    main:                Main.hs
+    source-dirs:         app
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - ics-merge
