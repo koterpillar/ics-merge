@@ -15,9 +15,10 @@ dependencies:
 - base >= 4.7 && < 5
 - bytestring
 - directory
-- extra
-- text
+- lens
 - scotty
+- text
+- time
 
 library:
   source-dirs: src
@@ -46,3 +47,4 @@ tests:
     - hspec
     - hspec-discover
     - QuickCheck
+    - quickcheck-text
